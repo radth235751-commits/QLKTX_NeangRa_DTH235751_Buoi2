@@ -298,7 +298,7 @@ namespace QLKTX.Forms
             btnThoat.TabIndex = 0;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
-            btnThoat.Click += btnThoat_Click;
+     //       btnThoat.Click += btnThoat_Click;
             // 
             // btnXuat
             // 
@@ -308,7 +308,7 @@ namespace QLKTX.Forms
             btnXuat.TabIndex = 0;
             btnXuat.Text = "Xuất...";
             btnXuat.UseVisualStyleBackColor = true;
-            btnXuat.Click += btnXuat_Click;
+        //    btnXuat.Click += btnXuat_Click;
             // 
             // btnNhap
             // 
@@ -318,7 +318,7 @@ namespace QLKTX.Forms
             btnNhap.TabIndex = 0;
             btnNhap.Text = "Nhập...";
             btnNhap.UseVisualStyleBackColor = true;
-            btnNhap.Click += btnNhap_Click;
+         //   btnNhap.Click += btnNhap_Click;
             // 
             // btnLuu
             // 
