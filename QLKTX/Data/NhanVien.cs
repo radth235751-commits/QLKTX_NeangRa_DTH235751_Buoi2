@@ -13,11 +13,15 @@ namespace QLKTX.Data
     {
         public int ID { get; set; }
         [Required]
-        public string MaNV { get; set; } = null!; //
-        public string HoVaTen { get; set; }
-        public string TenDangNhap { get; set; }
-        public string MatKhau { get; set; }
-        public bool QuyenHan { get; set; }
+        public string? MaNV { get; set; } = null!; //
+        public string? HoVaTen { get; set; }
+        public string? TenDangNhap { get; set; }
+        public string? MatKhau { get; set; }
+        public bool? QuyenHan { get; set; }
+        public string? DiaChi { get; set; }
+        public string? DienThoai { get; set; }
+
+        public string? GioiTinh { get; set; } = "";
 
         public virtual ObservableCollectionListSource<HoaDon> HoaDon { get; } = new();
     }
@@ -25,9 +29,13 @@ namespace QLKTX.Data
     public class DanhSachNhanVien
     {
         public int ID { get; set; }
-        public string MaNV { get; set; } = null!;
-        public string HoVaTen { get; set; }
-        public string TenDangNhap { get; set; }
-        public string QuyenHan { get; set; }
+        public string? MaNV { get; set; } = null!;
+        public string? HoVaTen { get; set; }
+        public string? TenDangNhap { get; set; }
+        public bool? QuyenHan { get; set; }
+        public string? DiaChi { get; set; }
+        public string? DienThoai { get; set; }
+        public string? GioiTinh { get; set; } = "";
+
     }
 }
