@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QLKTX.Data
 {
-    public partial  class SinhVien 
+    public partial class SinhVien
     {
         public int ID { get; set; }
 
@@ -27,7 +27,7 @@ namespace QLKTX.Data
         [EmailAddress]
         public string? Email { get; set; }
 
-        public bool Phai { get; set; }
+        public bool? Phai { get; set; }
 
         public string? HinhAnh { get; set; }
 
@@ -40,11 +40,31 @@ namespace QLKTX.Data
     public class DanhSachSinhVien
     {
         public int ID { get; set; }
-        public string MaSV { get; set; }
-        public string HoVaTen { get; set; }
+        public string? MaSV { get; set; }
+        public string? HoVaTen { get; set; }
         public string? DienThoai { get; set; }
         public string? Khoa { get; set; }
         public string? Email { get; set; }
-        public string Phai { get; set; }   // Nam / Nữ
+        public string? Phai { get; set; }
+        public string? DiaChi { get; set; }
+        public string? HinhAnh { get; set; }// Nam / Nữ
+
+        [NotMapped]
+        public Image Anh
+        {
+            get
+            {
+                try
+                {
+                    if (!string.IsNullOrEmpty(HinhAnh) && File.Exists(HinhAnh))
+                        return Image.FromFile(HinhAnh);
+                }
+                catch { }
+                return null;
+            }
+        }
     }
 }
+    
+    
+

@@ -1,45 +1,63 @@
-﻿using QLKTX.Data;
-using System;
-using System.Windows.Forms;
-
-namespace QLKTX.Forms
+﻿namespace QLKTX.Forms
 {
-    public partial class frmSinhVien : System.Windows.Forms.Form
+    partial class frmNhanVien
     {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
+            {
                 components.Dispose();
+            }
             base.Dispose(disposing);
         }
 
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            groupBox2 = new GroupBox();
+            dataGridView1 = new DataGridView();
+            MaNV = new DataGridViewTextBoxColumn();
+            HoVaTen = new DataGridViewTextBoxColumn();
+            DienThoai = new DataGridViewTextBoxColumn();
+            DiaChi = new DataGridViewTextBoxColumn();
+            GioiTinh = new DataGridViewTextBoxColumn();
+            TenDangNhap = new DataGridViewTextBoxColumn();
+            QuyenHan = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
-            label7 = new Label();
+            cboQuyenHan = new ComboBox();
+            txtMatKhau = new TextBox();
+            label10 = new Label();
+            label9 = new Label();
+            txtTenDangNhap = new TextBox();
             label8 = new Label();
+            label7 = new Label();
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            picHinhAnh = new PictureBox();
             groupBox3 = new GroupBox();
             radNu = new RadioButton();
             radNam = new RadioButton();
             txtDienThoai = new TextBox();
-            txtEmail = new TextBox();
             txtHoTen = new TextBox();
-            txtKhoa = new TextBox();
             txtDiaChi = new TextBox();
             txtTimKiem = new TextBox();
-            txtMASV = new TextBox();
+            txtMaNV = new TextBox();
             btnTimKiem = new Button();
-            btnDoiAnh = new Button();
             btnSua = new Button();
             btnThoat = new Button();
             btnXuat = new Button();
@@ -48,50 +66,107 @@ namespace QLKTX.Forms
             btnThem = new Button();
             btnHuyBo = new Button();
             btnXoa = new Button();
-            groupBox2 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            MaSV = new DataGridViewTextBoxColumn();
-            HoVaTen = new DataGridViewTextBoxColumn();
-            DienThoai = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            DiaChi = new DataGridViewTextBoxColumn();
-            GioiTinh = new DataGridViewTextBoxColumn();
-            Anh = new DataGridViewImageColumn();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picHinhAnh).BeginInit();
-            groupBox3.SuspendLayout();
+            label1 = new Label();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // groupBox2
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(489, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 21);
-            label1.TabIndex = 0;
+            groupBox2.Controls.Add(dataGridView1);
+            groupBox2.Location = new Point(18, 365);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(1264, 313);
+            groupBox2.TabIndex = 4;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Danh sách sinh viên";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MaNV, HoVaTen, DienThoai, DiaChi, GioiTinh, TenDangNhap, QuyenHan });
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(3, 25);
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 53;
+            dataGridView1.Size = new Size(1258, 285);
+            dataGridView1.TabIndex = 0;
+            // 
+            // MaNV
+            // 
+            MaNV.DataPropertyName = "MaNV";
+            MaNV.HeaderText = "Mã NV";
+            MaNV.MinimumWidth = 7;
+            MaNV.Name = "MaNV";
+            // 
+            // HoVaTen
+            // 
+            HoVaTen.DataPropertyName = "HoVaTen";
+            HoVaTen.HeaderText = "Họ và tên";
+            HoVaTen.MinimumWidth = 7;
+            HoVaTen.Name = "HoVaTen";
+            // 
+            // DienThoai
+            // 
+            DienThoai.DataPropertyName = "DienThoai";
+            DienThoai.HeaderText = "Điện thoại";
+            DienThoai.MinimumWidth = 7;
+            DienThoai.Name = "DienThoai";
+            // 
+            // DiaChi
+            // 
+            DiaChi.DataPropertyName = "DiaChi";
+            DiaChi.HeaderText = "Địa chỉ";
+            DiaChi.MinimumWidth = 7;
+            DiaChi.Name = "DiaChi";
+            // 
+            // GioiTinh
+            // 
+            GioiTinh.DataPropertyName = "GioiTinh";
+            GioiTinh.HeaderText = "Giới tính";
+            GioiTinh.MinimumWidth = 7;
+            GioiTinh.Name = "GioiTinh";
+            // 
+            // TenDangNhap
+            // 
+            TenDangNhap.DataPropertyName = "TenDangNhap";
+            TenDangNhap.HeaderText = "Tên đăng nhập";
+            TenDangNhap.MinimumWidth = 7;
+            TenDangNhap.Name = "TenDangNhap";
+            // 
+            // QuyenHan
+            // 
+            QuyenHan.DataPropertyName = "QuyenHan";
+            QuyenHan.HeaderText = "Quyền hạn";
+            QuyenHan.MinimumWidth = 7;
+            QuyenHan.Name = "QuyenHan";
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(cboQuyenHan);
+            groupBox1.Controls.Add(txtMatKhau);
+            groupBox1.Controls.Add(label10);
+            groupBox1.Controls.Add(label9);
+            groupBox1.Controls.Add(txtTenDangNhap);
             groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(picHinhAnh);
             groupBox1.Controls.Add(groupBox3);
             groupBox1.Controls.Add(txtDienThoai);
-            groupBox1.Controls.Add(txtEmail);
             groupBox1.Controls.Add(txtHoTen);
-            groupBox1.Controls.Add(txtKhoa);
             groupBox1.Controls.Add(txtDiaChi);
             groupBox1.Controls.Add(txtTimKiem);
-            groupBox1.Controls.Add(txtMASV);
+            groupBox1.Controls.Add(txtMaNV);
             groupBox1.Controls.Add(btnTimKiem);
-            groupBox1.Controls.Add(btnDoiAnh);
             groupBox1.Controls.Add(btnSua);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(btnXuat);
@@ -100,12 +175,61 @@ namespace QLKTX.Forms
             groupBox1.Controls.Add(btnThem);
             groupBox1.Controls.Add(btnHuyBo);
             groupBox1.Controls.Add(btnXoa);
-            groupBox1.Location = new Point(24, 12);
+            groupBox1.Location = new Point(18, 41);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(1264, 318);
-            groupBox1.TabIndex = 1;
+            groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Thông tin sinh viên";
+            groupBox1.Text = "Thông tin nhân viên";
+            // 
+            // cboQuyenHan
+            // 
+            cboQuyenHan.FormattingEnabled = true;
+            cboQuyenHan.Location = new Point(585, 237);
+            cboQuyenHan.Name = "cboQuyenHan";
+            cboQuyenHan.Size = new Size(239, 29);
+            cboQuyenHan.TabIndex = 8;
+            // 
+            // txtMatKhau
+            // 
+            txtMatKhau.Location = new Point(582, 182);
+            txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.Size = new Size(242, 29);
+            txtMatKhau.TabIndex = 7;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(447, 182);
+            label10.Name = "label10";
+            label10.Size = new Size(99, 21);
+            label10.TabIndex = 6;
+            label10.Text = "Mật khẩu (*):";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(447, 237);
+            label9.Name = "label9";
+            label9.Size = new Size(110, 21);
+            label9.TabIndex = 6;
+            label9.Text = "Quyền hạn (*):";
+            // 
+            // txtTenDangNhap
+            // 
+            txtTenDangNhap.Location = new Point(582, 128);
+            txtTenDangNhap.Name = "txtTenDangNhap";
+            txtTenDangNhap.Size = new Size(242, 29);
+            txtTenDangNhap.TabIndex = 7;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(435, 131);
+            label8.Name = "label8";
+            label8.Size = new Size(135, 21);
+            label8.TabIndex = 6;
+            label8.Text = "Tên đăng nhập (*):";
             // 
             // label7
             // 
@@ -116,37 +240,19 @@ namespace QLKTX.Forms
             label7.TabIndex = 5;
             label7.Text = "Tìm kiếm:";
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(3, 291);
-            label8.Name = "label8";
-            label8.Size = new Size(48, 21);
-            label8.TabIndex = 4;
-            label8.Text = "Khoa:";
-            // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(6, 244);
+            label6.Location = new Point(6, 249);
             label6.Name = "label6";
             label6.Size = new Size(60, 21);
             label6.TabIndex = 4;
             label6.Text = "Địa chỉ:";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(6, 194);
-            label5.Name = "label5";
-            label5.Size = new Size(51, 21);
-            label5.TabIndex = 4;
-            label5.Text = "Email:";
-            // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(6, 143);
+            label4.Location = new Point(6, 186);
             label4.Name = "label4";
             label4.Size = new Size(84, 21);
             label4.TabIndex = 4;
@@ -155,7 +261,7 @@ namespace QLKTX.Forms
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(6, 94);
+            label3.Location = new Point(6, 128);
             label3.Name = "label3";
             label3.Size = new Size(100, 21);
             label3.TabIndex = 4;
@@ -164,19 +270,11 @@ namespace QLKTX.Forms
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(6, 43);
+            label2.Location = new Point(6, 65);
             label2.Name = "label2";
-            label2.Size = new Size(101, 21);
+            label2.Size = new Size(128, 21);
             label2.TabIndex = 4;
-            label2.Text = "Mã sinh viên:";
-            // 
-            // picHinhAnh
-            // 
-            picHinhAnh.Location = new Point(476, 113);
-            picHinhAnh.Name = "picHinhAnh";
-            picHinhAnh.Size = new Size(162, 171);
-            picHinhAnh.TabIndex = 3;
-            picHinhAnh.TabStop = false;
+            label2.Text = "Mã nhân viên (*):";
             // 
             // groupBox3
             // 
@@ -213,35 +311,21 @@ namespace QLKTX.Forms
             // 
             // txtDienThoai
             // 
-            txtDienThoai.Location = new Point(143, 135);
+            txtDienThoai.Location = new Point(143, 178);
             txtDienThoai.Name = "txtDienThoai";
             txtDienThoai.Size = new Size(262, 29);
             txtDienThoai.TabIndex = 1;
             // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(143, 186);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(262, 29);
-            txtEmail.TabIndex = 1;
-            // 
             // txtHoTen
             // 
-            txtHoTen.Location = new Point(143, 86);
+            txtHoTen.Location = new Point(143, 120);
             txtHoTen.Name = "txtHoTen";
             txtHoTen.Size = new Size(262, 29);
             txtHoTen.TabIndex = 1;
             // 
-            // txtKhoa
-            // 
-            txtKhoa.Location = new Point(143, 283);
-            txtKhoa.Name = "txtKhoa";
-            txtKhoa.Size = new Size(262, 29);
-            txtKhoa.TabIndex = 1;
-            // 
             // txtDiaChi
             // 
-            txtDiaChi.Location = new Point(143, 233);
+            txtDiaChi.Location = new Point(143, 246);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(262, 29);
             txtDiaChi.TabIndex = 1;
@@ -253,12 +337,12 @@ namespace QLKTX.Forms
             txtTimKiem.Size = new Size(262, 29);
             txtTimKiem.TabIndex = 1;
             // 
-            // txtMASV
+            // txtMaNV
             // 
-            txtMASV.Location = new Point(143, 37);
-            txtMASV.Name = "txtMASV";
-            txtMASV.Size = new Size(262, 29);
-            txtMASV.TabIndex = 1;
+            txtMaNV.Location = new Point(143, 59);
+            txtMaNV.Name = "txtMaNV";
+            txtMaNV.Size = new Size(262, 29);
+            txtMaNV.TabIndex = 1;
             // 
             // btnTimKiem
             // 
@@ -269,16 +353,6 @@ namespace QLKTX.Forms
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = true;
             btnTimKiem.Click += btnTimKiem_Click;
-            // 
-            // btnDoiAnh
-            // 
-            btnDoiAnh.Location = new Point(664, 120);
-            btnDoiAnh.Name = "btnDoiAnh";
-            btnDoiAnh.Size = new Size(98, 31);
-            btnDoiAnh.TabIndex = 0;
-            btnDoiAnh.Text = "Đổi ảnh";
-            btnDoiAnh.UseVisualStyleBackColor = true;
-            btnDoiAnh.Click += btnDoiAnh_Click;
             // 
             // btnSua
             // 
@@ -360,142 +434,74 @@ namespace QLKTX.Forms
             btnXoa.UseVisualStyleBackColor = true;
             btnXoa.Click += btnXoa_Click;
             // 
-            // groupBox2
+            // label1
             // 
-            groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(24, 336);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1264, 313);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Danh sách sinh viên";
+            label1.AutoSize = true;
+            label1.Location = new Point(483, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 21);
+            label1.TabIndex = 2;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MaSV, HoVaTen, DienThoai, Email, DiaChi, GioiTinh, Anh });
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 25);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 53;
-            dataGridView1.Size = new Size(1258, 285);
-            dataGridView1.TabIndex = 0;
-            // 
-            // MaSV
-            // 
-            MaSV.DataPropertyName = "MaSV";
-            MaSV.HeaderText = "Mã SV";
-            MaSV.MinimumWidth = 7;
-            MaSV.Name = "MaSV";
-            // 
-            // HoVaTen
-            // 
-            HoVaTen.DataPropertyName = "HoVaTen";
-            HoVaTen.HeaderText = "Họ và tên";
-            HoVaTen.MinimumWidth = 7;
-            HoVaTen.Name = "HoVaTen";
-            // 
-            // DienThoai
-            // 
-            DienThoai.DataPropertyName = "DienThoai";
-            DienThoai.HeaderText = "Điện thoại";
-            DienThoai.MinimumWidth = 7;
-            DienThoai.Name = "DienThoai";
-            // 
-            // Email
-            // 
-            Email.DataPropertyName = "Email";
-            Email.HeaderText = "Email";
-            Email.MinimumWidth = 7;
-            Email.Name = "Email";
-            // 
-            // DiaChi
-            // 
-            DiaChi.DataPropertyName = "DiaChi";
-            DiaChi.HeaderText = "Địa chỉ";
-            DiaChi.MinimumWidth = 7;
-            DiaChi.Name = "DiaChi";
-            // 
-            // GioiTinh
-            // 
-            GioiTinh.DataPropertyName = "Phai";
-            GioiTinh.HeaderText = "Giới tính";
-            GioiTinh.MinimumWidth = 7;
-            GioiTinh.Name = "GioiTinh";
-            // 
-            // Anh
-            // 
-            Anh.DataPropertyName = "Anh";
-            Anh.HeaderText = "Ảnh";
-            Anh.MinimumWidth = 7;
-            Anh.Name = "Anh";
-            Anh.Resizable = DataGridViewTriState.True;
-            Anh.SortMode = DataGridViewColumnSortMode.Automatic;
-            // 
-            // frmSinhVien
+            // frmNhanVien
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 671);
+            ClientSize = new Size(1300, 719);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(label1);
-            Name = "frmSinhVien";
-            Text = "Sinh Viên";
-            Load += frmSinhVien_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picHinhAnh).EndInit();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
+            Name = "frmNhanVien";
+            Text = "frmNhanVien";
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        private Label label1;
+        #endregion
+
+        private GroupBox groupBox2;
+        private DataGridView dataGridView1;
         private GroupBox groupBox1;
+        private Label label7;
+        private Label label6;
+        private Label label4;
+        private Label label3;
+        private Label label2;
         private GroupBox groupBox3;
+        private RadioButton radNu;
+        private RadioButton radNam;
         private TextBox txtDienThoai;
-        private TextBox txtEmail;
         private TextBox txtHoTen;
         private TextBox txtDiaChi;
-        private TextBox txtMASV;
-        private Button btnHuyBo;
-        private Button btnXoa;
-        private GroupBox groupBox2;
-        private PictureBox picHinhAnh;
-        private Button btnDoiAnh;
+        private TextBox txtTimKiem;
+        private TextBox txtMaNV;
+        private Button btnTimKiem;
         private Button btnSua;
         private Button btnThoat;
         private Button btnXuat;
         private Button btnNhap;
         private Button btnLuu;
         private Button btnThem;
-        private DataGridView dataGridView1;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private TextBox txtTimKiem;
-        private Label label7;
-        private Button btnTimKiem;
-        private RadioButton radNu;
-        private RadioButton radNam;
+        private Button btnHuyBo;
+        private Button btnXoa;
+        private Label label1;
+        private TextBox txtMatKhau;
+        private Label label10;
+        private Label label9;
+        private TextBox txtTenDangNhap;
         private Label label8;
-        private TextBox txtKhoa;
-        private DataGridViewTextBoxColumn MaSV;
+        private DataGridViewTextBoxColumn MaNV;
         private DataGridViewTextBoxColumn HoVaTen;
         private DataGridViewTextBoxColumn DienThoai;
-        private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn DiaChi;
         private DataGridViewTextBoxColumn GioiTinh;
-        private DataGridViewImageColumn Anh;
+        private DataGridViewTextBoxColumn TenDangNhap;
+        private DataGridViewTextBoxColumn QuyenHan;
+        private ComboBox cboQuyenHan;
     }
 }
